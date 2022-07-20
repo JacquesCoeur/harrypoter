@@ -9,6 +9,16 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Housechars } from "./views/housechars";
+import { Housechars2 } from "./views/housechars2";
+import { Housechars3 } from "./views/housechars3";
+import { Housechars4 } from "./views/housechars4";
+import { Character } from "./views/character";
+import { Character2 } from "./views/character2";
+import { Character3 } from "./views/character3";
+import { Character4 } from "./views/character4";
+
+
 
 //create your first component
 const Layout = () => {
@@ -28,8 +38,32 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="/single/:theid">
+						<Route exact path="/Single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/housechars">
+							<Housechars/>
+						</Route>
+						<Route exact path="/housechars2">
+							<Housechars2/>
+						</Route>
+						<Route exact path="/housechars3">
+							<Housechars3/>
+						</Route>
+						<Route exact path="/housechars4">
+							<Housechars4/>
+						</Route>
+						<Route exact path="/character/:theid">
+							<Character/>
+						</Route>
+						<Route exact path="/character2/:theid">
+							<Character2/>
+						</Route>
+						<Route exact path="/character3/:theid">
+							<Character3/>
+						</Route>
+						<Route exact path="/character4/:theid">
+							<Character4/>
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

@@ -12,9 +12,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			characters:[],
+			characters2:[],
+			characters3:[],
+			characters4:[]
 		},
 		actions: {
+			
+			    getCharacterGryffindor: () => {
+					const store = getStore();
+					fetch("https://hp-api.herokuapp.com/api/characters/house/gryffindor")
+					.then(response => response.json())
+					.then(result => {setStore({characters:[...result]}),console.log(result)})
+					.catch(error => console.log('error', error));
+				},
+			    getCharacterSlytherin: () => {
+					const store = getStore();
+					fetch("https://hp-api.herokuapp.com/api/characters/house/slytherin")
+					.then(response => response.json())
+					.then(result => {setStore({characters2:[...result]}),console.log(result)})
+					.catch(error => console.log('error', error));
+				},
+				getCharacterHufflepuff: () => {
+					const store = getStore();
+					fetch("https://hp-api.herokuapp.com/api/characters/house/hufflepuff")
+					.then(response => response.json())
+					.then(result => {setStore({characters3:[...result]}),console.log(result)})
+					.catch(error => console.log('error', error));
+				},
+				getCharacterRavenclaw: () => {
+					const store = getStore();
+					fetch("https://hp-api.herokuapp.com/api/characters/house/ravenclaw")
+					.then(response => response.json())
+					.then(result => {setStore({characters4:[...result]}),console.log(result)})
+					.catch(error => console.log('error', error));
+				},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
