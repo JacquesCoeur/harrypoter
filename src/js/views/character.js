@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/demo.css";
-
 import { useParams } from "react-router-dom";
+import gryffindor from "../../img/gryffindor.webp"
 
 export const Character = () => {
     	const { store, actions } = useContext(Context);
@@ -14,7 +14,7 @@ export const Character = () => {
             <div className="card mb-3 gryffcharcard gryff container">
             <div className="row g-0">
                 <div className="col-md-4 container gryff ">
-                <img src={(store.characters[params.theid].image)} className="cardpersonal" alt="..."/>
+                <img src={(store.characters[params.theid].image? store.characters[params.theid].image : gryffindor)} className="cardpersonal" alt="..."/>
                 </div>
                 <div className="col-md-8">
                 <div className="card-body gryff">

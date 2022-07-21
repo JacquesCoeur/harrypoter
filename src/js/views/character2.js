@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/demo.css";
-
+import slytherin from "../../img/slytherin.webp"
 import { useParams } from "react-router-dom";
 
 export const Character2 = () => {
@@ -11,13 +11,13 @@ export const Character2 = () => {
     return (
         <div>
 
-            <div className="card mb-3 gryffcharcard gryff container">
+            <div className="card mb-3 slythcharcard slyth container">
             <div className="row g-0">
-                <div className="col-md-4 container gryff ">
-                <img src={(store.characters2[params.theid].image)} className="cardpersonal" alt="..."/>
+                <div className="col-md-4 container slyth ">
+                <img src={(store.characters2[params.theid].image? store.characters2[params.theid].image : slytherin)} className="cardpersonal" alt="..."/>
                 </div>
                 <div className="col-md-8">
-                <div className="card-body gryff">
+                <div className="card-body slyth">
                     <h5 className="card-title text-light h3" >Name: {(store.characters2[params.theid].name)}</h5>
                     <p className="card-text text-light">Species: {(store.characters2[params.theid]?.species)}</p>
                     <p className="card-text text-light">Gender: {(store.characters2[params.theid]?.gender)}</p>

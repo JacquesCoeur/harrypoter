@@ -18,3 +18,33 @@ body {
 .gryffcharcard {
     border: 2px solid yellow;
 }
+.slyth {
+    background-color: rgb(0, 72, 11);
+}
+.cardslythback {
+    background-color: rgb(0, 72, 11);
+    border: 1px solid rgb(171, 171, 169);
+}
+.slythcharcard {
+    border: 2px solid rgb(171, 171, 169);
+}
+.huffle {
+    background-color: rgb(218, 149, 0);
+}
+.cardshuffleback {
+    background-color: rgb(218, 149, 0);
+    border: 1px solid rgb(93, 93, 93);
+}
+.hufflecharcard {
+    border: 2px solid rgb(93, 93, 93);
+}
+.raven {
+    background-color: rgb(0, 47, 109);
+}
+.cardsravenback {
+    background-color: rgb(0, 47, 109);
+    border: 1px solid rgb(210, 199, 0);;
+}
+.ravencharcard {
+    border: 2px solid rgb(210, 199, 0);
+}

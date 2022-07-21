@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/demo.css";
-
+import ravenclaw from "../../img/ravenclaw.webp"
 import { useParams } from "react-router-dom";
 
 export const Character4 = () => {
@@ -11,13 +11,13 @@ export const Character4 = () => {
     return (
         <div>
 
-            <div className="card mb-3 gryffcharcard gryff container">
+            <div className="card mb-3 ravencharcard raven container">
             <div className="row g-0">
-                <div className="col-md-4 container gryff ">
-                <img src={(store.characters4[params.theid].image)} className="cardpersonal" alt="..."/>
+                <div className="col-md-4 container raven ">
+                <img src={(store.characters4[params.theid].image? store.characters4[params.theid].image : ravenclaw)} className="cardpersonal" alt="..."/>
                 </div>
                 <div className="col-md-8">
-                <div className="card-body gryff">
+                <div className="card-body raven">
                     <h5 className="card-title text-light h3" >Name: {(store.characters4[params.theid].name)}</h5>
                     <p className="card-text text-light">Species: {(store.characters4[params.theid]?.species)}</p>
                     <p className="card-text text-light">Gender: {(store.characters4[params.theid]?.gender)}</p>

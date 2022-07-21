@@ -16,7 +16,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters:[],
 			characters2:[],
 			characters3:[],
-			characters4:[]
+			characters4:[],
+			favs:[]
 		},
 		actions: {
 			
@@ -70,7 +71,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			addFavorites: function(name) {
+				const store = getStore();
+				if(!(store.favs.includes(name))){
+					setStore(store.favs.push(name))
+					
+				}
+				
+			},
+			deleteFavorites: function(name){
+				const store = getStore();
+				setStore({favs: store.favs.filter((value)=>{return(value != name)})})
+				
 			}
+
 		}
 	};
 };
